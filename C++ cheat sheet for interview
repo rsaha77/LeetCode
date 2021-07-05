@@ -104,10 +104,10 @@ Map.erase(1);                                           // delete     equivalent
 
 unordered_map<int, string>::iterator it = Map.find(1);  // find by key
 if(iter != Map.end()) cout << iter->second; 
-else cout << "not found"; 
+else cout << "not found";
 
-for(iter = Map.begin(); iter != Map.end(); ++iter)
-    cout << iter->first << iter->second <<end;          // traverse
+for (auto mp: Map)                                      // use auto for traversal
+  	cout << mp.first << " :: " << mp.second << "\n";
 
 Map.erase("one");                                       // delete
 Map.empty();
